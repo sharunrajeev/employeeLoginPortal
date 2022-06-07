@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="build.css">
+    <title>Employee Portal | Login</title>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="w-full fixed shadow-md">
+        <div class="max-w-6xl mx-auto px-2 sm:px-6 lg:px-10">
+            <div class="relative flex items-center justify-between h-16">
+                <div class="flex items-center justify-start">
+                    <div class="flex-shrink-0 flex items-center">
+                        <img class="block h-10 w-auto" src="./brand_icon.svg" alt="Entri">
+                        <h1
+                            class="mx-2 font-extrabold text-3xl text-entri-color hover:text-entri-color-dark cursor-pointer">
+                            ENTRI
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- login section -->
+    <div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md w-full space-y-10">
+            <div>
+                <h2 class="mt-6 text-center text-4xl font-bold text-entri-color-dark">Employee Login</h2>
+            </div>
+            <form id="login-form" class="mt-8 space-y-6" action="/index.html" method="POST">
+                <input type="hidden" name="remember" value="true">
+                <div class="rounded-md shadow-sm -space-y-px">
+                    <div>
+                        <label for="username" class="sr-only">Username</label>
+                        <input id="username" name="username" type="email" autocomplete="off" required
+                            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-entri-color text-entri-color-dark rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                            placeholder="Username">
+                    </div>
+                    <div>
+                        <label for="password" class="sr-only">Password</label>
+                        <input id="password" name="password" type="password" autocomplete="current-password" required
+                            class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-entri-color text-entri-color-dark rounded-b-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm"
+                            placeholder="Password">
+                        <small class="text-red-600" id="password-error">
+                        </small>
+                    </div>
+                </div>
+
+                <div>
+                    <button type="submit"
+                        class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-entri-color hover:bg-entri-color-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                        onclick="validatePassword()" value="getUsername()">
+                        Sign in
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script src="index.js"></script>
+
+</html>
