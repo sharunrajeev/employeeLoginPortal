@@ -39,7 +39,7 @@ function validatePassword() {
     if (containLowercase && containUppercase && containSpecialcase) {
         document.getElementById("password-error").innerHTML = "";
         var username = getUsername();
-        location.replace("/success.html?data=" + username);
+        location.replace("/employeeLoginPortal/success.html?data=" + username);
     }
 }
 
